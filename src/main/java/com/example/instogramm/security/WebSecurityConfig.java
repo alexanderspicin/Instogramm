@@ -1,6 +1,6 @@
 package com.example.instogramm.security;
 
-import com.example.instogramm.security.SecurityConstants;
+
 import com.example.instogramm.security.jwt.JWTAuthenticationEntryPoint;
 import com.example.instogramm.security.jwt.JWTAuthenticationFilter;
 import com.example.instogramm.service.ConfigUserDetailsService;

@@ -22,7 +22,7 @@ public class ConfigUserDetailsService implements UserDetailsService {
     }
 
     public UserDetails loadUserByUsername(String username){
-        User user = userRepository.findUserByEmail(username).orElseThrow(() -> new UsernameNotFoundException("User not found" + username));
+        User user = userRepository.findUserByUsername(username).orElseThrow(() -> new UsernameNotFoundException("User not found" + username));
         return initUser(user);
     }
 
@@ -33,8 +33,8 @@ public class ConfigUserDetailsService implements UserDetailsService {
 
         return new User(user.getId(),
                 user.getUsername(),
-                user.getEmail(),
                 user.getPassword(),
+                user.getEmail(),
                 authorities);
     }
 
