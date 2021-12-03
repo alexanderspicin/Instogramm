@@ -13,5 +13,6 @@ public class UserDTO {
 
     @NotEmpty
     private String lastname;
+    private String username;
     private String info;
 }
